@@ -21,7 +21,7 @@ const Carrousel = ({ secciones }: { secciones: Seccion[] }) => {
     }
     return (
         /* Contenedor */
-        <div className="relative bg-red-400 h-full">
+        <div className="relative h-full rounded-xl overflow-hidden shadow-lg shadow-black/50 ring-1 ring-white/10">
             {/* Secciones del carrusel */}
             {secciones.map((seccion: Seccion, i) => (
                 <div key={i} className={`h-full bg-no-repeat bg-cover bg-center flex flex-row justify-center items-end p-2.5 ${i === seccionActual ? "block" : "hidden"}`} style={

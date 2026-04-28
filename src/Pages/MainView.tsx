@@ -7,15 +7,15 @@ const MainView = () => {
     return (
         <>
             {/* Container */}
-            <div className="grid grid-cols-5">
-                <aside className="col-span-1 bg-red-400 h-screen p-10 flex flex-col gap-6">
+            <div className="grid grid-cols-5 bg-[#1c1a16]">
+                <aside className="col-span-1 bg-[#0f0e0b] h-screen p-10 flex flex-col gap-6">
                     {/* Logo */}
-                    <div className="bg-blue-300 flex flex-row justify-start items-center gap-2.5">
-                        <div className="bg-blue-700 w-10 h-10"></div>
-                        <h1 className="font-bold">Hispanialengua</h1>
+                    <div className="flex flex-row justify-start items-center gap-2.5">
+                        <div className="bg-yellow-500 w-10 h-10"></div>
+                        <h1 className="font-bold text-white text-2xl">Hispanialengua</h1>
                     </div>
                     {/* Menu */}
-                    <ul className="bg-orange-300 flex flex-col justify-center items-start gap-8">
+                    <ul className="flex flex-col justify-center items-start gap-8 text-white">
                         <li><Link to={"/capsulas"}>Cápsulas</Link></li>
                         <li><Link to={"/paremias"}>Paremias</Link></li>
                         <li><Link to={"/espanol-vivo"}>Español vivo</Link></li>
@@ -29,14 +29,14 @@ const MainView = () => {
                     </ul>
                 </aside>
                 {/* Main */}
-                <main className="col-span-4 p-7 bg-yellow-200">
-                    <h2 className="text-5xl mb-9">Bienvenidos a <span className="font-bold">Hispanialengua</span></h2>
-                    <div className="bg-red-200 h-[50%] flex flex-row justify-center items-end p-5 mb-10 bg-no-repeat bg-cover bg-center" style={{backgroundImage: `url(${base}ImagesMain/hispanialengua.webp)`}}>
+                <main className="col-span-4 p-7">
+                    <h2 className="text-5xl mb-9 text-white">Bienvenidos a <span className="font-bold">Hispanialengua</span></h2>
+                    <div className="h-[50%] flex flex-row justify-center items-end p-5 mb-10 bg-no-repeat bg-cover bg-center shadow-lg shadow-black/50 ring-1 ring-white/10" style={{backgroundImage: `url(${base}ImagesMain/hispanialengua.webp)`}}>
                         <p className="text-2xl text-center w-[80%] text-white drop-shadow-lg">Mi tierra natal, Salamanca (Castilla y León), también llamada: «Roma la chica», tiene
                             algo especial: su luz, sus piedras, su noble gente...</p>
                     </div>
                     {/* Carrouseles */}
-                    <div className="bg-green-300 h-[35%] grid grid-cols-2 gap-10 px-4">
+                    <div className="h-[35%] grid grid-cols-2 gap-10 px-4">
                         {/* Educativo */}
                         <Carrousel secciones={[
                             {"nombre": "Cápsulas", "imagen": `${base}ImagesMain/capsulas.webp`, "ruta": "/capsulas"},
