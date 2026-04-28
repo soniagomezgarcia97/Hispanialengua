@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import Carrousel from "../components/Carrousel"
 
 const MainView = () => {
+    const base = import.meta.env.BASE_URL
     return (
         <>
             {/* Container */}
@@ -30,27 +31,27 @@ const MainView = () => {
                 {/* Main */}
                 <main className="col-span-4 p-7 bg-yellow-200">
                     <h2 className="text-5xl mb-9">Bienvenidos a <span className="font-bold">Hispanialengua</span></h2>
-                    <div className="bg-red-200 h-[50%] flex flex-row justify-center items-end p-10 mb-10 bg-[url('/ImagesMain/hispanialengua.webp')] bg-no-repeat bg-cover bg-center">
-                        <p className="text-2xl text-center w-[80%] text-white">Mi tierra natal, Salamanca (Castilla y León), también llamada: «Roma la chica», tiene
+                    <div className="bg-red-200 h-[50%] flex flex-row justify-center items-end p-5 mb-10 bg-no-repeat bg-cover bg-center" style={{backgroundImage: `url(${base}ImagesMain/hispanialengua.webp)`}}>
+                        <p className="text-2xl text-center w-[80%] text-white drop-shadow-lg">Mi tierra natal, Salamanca (Castilla y León), también llamada: «Roma la chica», tiene
                             algo especial: su luz, sus piedras, su noble gente...</p>
                     </div>
                     {/* Carrouseles */}
                     <div className="bg-green-300 h-[35%] grid grid-cols-2 gap-10 px-4">
                         {/* Educativo */}
                         <Carrousel secciones={[
-                            {"nombre": "Cápsulas", "imagen": "/ImagesMain/capsulas.webp", "ruta": "/capsulas"},
-                            {"nombre": "Paremias", "imagen": "/ImagesMain/paremias.webp", "ruta": "/paremias"},
-                            {"nombre": "Español vivo", "imagen": "/ImagesMain/español_vivo.webp", "ruta": "espanol-vivo"},
-                            {"nombre": "Trabalenguas", "imagen": "/ImagesMain/trabalenguas.webp", "ruta": "/trabalenguas"},
-                            {"nombre": "Juegos", "imagen": "/ImagesMain/juegos.webp", "ruta": "/juegos"}
+                            {"nombre": "Cápsulas", "imagen": `${base}ImagesMain/capsulas.webp`, "ruta": "/capsulas"},
+                            {"nombre": "Paremias", "imagen": `${base}ImagesMain/paremias.webp`, "ruta": "/paremias"},
+                            {"nombre": "Español vivo", "imagen": `${base}ImagesMain/español_vivo.webp`, "ruta": "/espanol-vivo"},
+                            {"nombre": "Trabalenguas", "imagen": `${base}ImagesMain/trabalenguas.webp`, "ruta": "/trabalenguas"},
+                            {"nombre": "Juegos", "imagen": `${base}ImagesMain/juegos.webp`, "ruta": "/juegos"}
                         ]} />
                         {/* Curiosidades */}
                         <Carrousel secciones={[
-                            {"nombre": "Cortos", "imagen": "/ImagesMain/cortos.webp", "ruta": "cortos"},
-                            {"nombre": "Cultura", "imagen": "/ImagesMain/cultura.webp", "ruta": "cultura"},
-                            {"nombre": "Música", "imagen": "/ImagesMain/musica.webp", "ruta": "musica"},
-                            {"nombre": "Comarca", "imagen": "/ImagesMain/nuestra_comarca.webp", "ruta": "comarca"},
-                            {"nombre": "Sobre nosotros", "imagen": "/ImagesMain/sobre_nosotros.webp", "ruta": "sobre-nosotros"}
+                            {"nombre": "Cortos", "imagen": `${base}ImagesMain/cortos.webp`, "ruta": "/cortos"},
+                            {"nombre": "Cultura", "imagen": `${base}ImagesMain/cultura.webp`, "ruta": "/cultura"},
+                            {"nombre": "Música", "imagen": `${base}ImagesMain/musica.webp`, "ruta": "/musica"},
+                            {"nombre": "Comarca", "imagen": `${base}ImagesMain/nuestra_comarca.webp`, "ruta": "/comarca"},
+                            {"nombre": "Sobre nosotros", "imagen": `${base}ImagesMain/sobre_nosotros.webp`, "ruta": "/sobre-nosotros"}
                         ]} />
                     </div>
                 </main>
