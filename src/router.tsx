@@ -15,7 +15,7 @@ import SobreNosotros from "./Pages/SobreNosotros"
 export default function router() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/Hispanialengua">
         <Routes>
           <Route path="/" element={<MainView />} />
           <Route path="/capsulas" element={<Capsulas />} />
