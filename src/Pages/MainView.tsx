@@ -10,9 +10,9 @@ const MainView = () => {
     return (
         <>
             {/* Container */}
-            <div className="content-start grid grid-cols-1 lg:grid-cols-6 bg-[#1c1a16] min-h-screen">
+            <div className="content-start grid grid-cols-1 lg:grid-cols-6 xl:grid-cols-5 bg-[#1c1a16] min-h-screen">
                 {/* Menu aside */}
-                <aside className="col-span-1 bg-[#0f0e0b] lg:h-screen p-10 flex flex-col gap-6 self-start lg:col-span-2">
+                <aside className="col-span-1 bg-[#0f0e0b] lg:h-screen p-10 flex flex-col gap-6 self-start lg:col-span-2 xl:col-span-1">
                     <div className="flex flex-row justify-between items-center">
                         {/* Logo */}
                         <div className="flex flex-row justify-start items-center gap-2.5">
