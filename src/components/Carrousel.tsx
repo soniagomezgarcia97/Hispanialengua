@@ -26,7 +26,7 @@ const Carrousel = ({ secciones }: { secciones: Seccion[] }) => {
             {secciones.map((seccion: Seccion, i) => (
                 <div key={i} className={`h-full bg-no-repeat bg-cover bg-center flex flex-row justify-center items-end p-2.5 ${i === seccionActual ? "block" : "hidden"}`} style={
                     { backgroundImage: `url(${seccion.imagen})` }}>
-                    <Link to={seccion.ruta} className="text-white font-bold">{seccion.nombre}</Link>
+                    <Link to={seccion.ruta} className="text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] bg-black/40 px-3 py-1 rounded-md backdrop-blur-sm font-bold">{seccion.nombre}</Link>
                 </div>
             ))}
             {/* Botones */}
