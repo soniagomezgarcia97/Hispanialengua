@@ -1,5 +1,5 @@
 /* Importaciones */
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 type Seccion = {
@@ -19,6 +19,12 @@ const Carrousel = ({ secciones }: { secciones: Seccion[] }) => {
     const prev = () => {
         setSeccionActual(seccionActual === 0 ? totalSecciones - 1 : seccionActual - 1)
     }
+    useEffect(() => {
+        secciones.forEach(seccion => {
+            const img = new Image()
+            img.src = seccion.imagen
+        })
+    }, [])
     return (
         /* Contenedor */
         <div className="relative h-full rounded-xl overflow-hidden shadow-lg shadow-black/50 ring-1 ring-white/10">
