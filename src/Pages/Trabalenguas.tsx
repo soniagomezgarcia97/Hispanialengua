@@ -9,7 +9,7 @@ const Trabalenguas = () => {
   return (
     <>
       {/* Container */}
-      <div className="bg-[#1c1a16] w-full h-auto flex flex-col relative">
+      <div className="bg-[#1c1a16] w-full min-h-screen flex flex-col relative">
         {/* Header */}
         <header className="w-full col-span-1 bg-[#0f0e0b] lg:h-screen p-10 flex flex-col gap-6 self-start lg:col-span-2 xl:col-span-1">
                     <div className="flex flex-row justify-between items-center">

@@ -34,16 +34,16 @@ const MainView = () => {
                     </div>
                     {/* Menu */}
                     <ul className={`text-white ml-[20%] lg:flex flex-col justify-center items-start gap-8 ${menuDesplegable ? "flex flex-col justify-center items-start gap-8" : "hidden"}`}>
-                        <li><Link to={"/capsulas"}>Cápsulas</Link></li>
-                        <li><Link to={"/paremias"}>Paremias</Link></li>
-                        <li><Link to={"/espanol-vivo"}>Español vivo</Link></li>
-                        <li><Link to={"/juegos"}>Juegos</Link></li>
-                        <li><Link to={"/trabalenguas"}>Trabalenguas</Link></li>
-                        <li><Link to={"/cortos"}>Cortos</Link></li>
-                        <li><Link to={"/cultura"}>Cultura</Link></li>
-                        <li><Link to={"/musica"}>Música</Link></li>
-                        <li><Link to={"/comarca"}>Comarca</Link></li>
-                        <li><Link to={"/sobre-nosotros"}>Sobre nosotros</Link></li>
+                        <li className="hover:text-yellow-500 duration-100"><Link to={"/capsulas"}>Cápsulas</Link></li>
+                        <li className="hover:text-yellow-500 duration-100"><Link to={"/paremias"}>Paremias</Link></li>
+                        <li className="hover:text-yellow-500 duration-100"><Link to={"/espanol-vivo"}>Español vivo</Link></li>
+                        <li className="hover:text-yellow-500 duration-100"><Link to={"/juegos"}>Juegos</Link></li>
+                        <li className="hover:text-yellow-500 duration-100"><Link to={"/trabalenguas"}>Trabalenguas</Link></li>
+                        <li className="hover:text-yellow-500 duration-100"><Link to={"/cortos"}>Cortos</Link></li>
+                        <li className="hover:text-yellow-500 duration-100"><Link to={"/cultura"}>Cultura</Link></li>
+                        <li className="hover:text-yellow-500 duration-100"><Link to={"/musica"}>Música</Link></li>
+                        <li className="hover:text-yellow-500 duration-100"><Link to={"/comarca"}>Comarca</Link></li>
+                        <li className="hover:text-yellow-500 duration-100"><Link to={"/sobre-nosotros"}>Sobre nosotros</Link></li>
                     </ul>
                 </aside>
                 {/* Main */}
