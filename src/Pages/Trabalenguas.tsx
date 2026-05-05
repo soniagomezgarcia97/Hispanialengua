@@ -11,7 +11,7 @@ const Trabalenguas = () => {
       {/* Container */}
       <div className="bg-[#1c1a16] w-full min-h-screen flex flex-col relative">
         {/* Header */}
-        <header className="w-full col-span-1 bg-[#0f0e0b] lg:h-screen p-10 flex flex-col gap-6 self-start lg:col-span-2 xl:col-span-1">
+        <header className="w-full col-span-1 bg-[#0f0e0b] p-10 flex flex-col gap-6 self-start xl:col-span-1">
                     <div className="flex flex-row justify-between items-center">
                         {/* Logo */}
                         <div className="flex flex-row justify-start items-center gap-2.5">
@@ -32,7 +32,7 @@ const Trabalenguas = () => {
                         </button>
                     </div>
                     {/* Menu */}
-                    <ul className={`text-white ml-[20%] lg:flex flex-col justify-center items-start gap-8 ${menuDesplegable ? "flex flex-col justify-center items-start gap-8" : "hidden"}`}>
+                    <ul className={`text-white ml-[20%] lg:flex flex-row lg:ml-0 justify-center items-start gap-8 ${menuDesplegable ? "flex flex-col justify-center items-start gap-8" : "hidden"}`}>
                         <li><Link to={"/capsulas"}>Cápsulas</Link></li>
                         <li><Link to={"/paremias"}>Paremias</Link></li>
                         <li><Link to={"/espanol-vivo"}>Español vivo</Link></li>
