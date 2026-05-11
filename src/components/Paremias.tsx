@@ -4,7 +4,9 @@ import { useEffect, useState } from "react"
 /* Type */
 type ParemiasType = {
     urlImagen: string,
-    dicho: string
+    dicho: string,
+    significado: string,
+    origen: string
 }
 type PropsType = {
     paremias: ParemiasType[],
@@ -21,6 +23,8 @@ const ParemiasComp = ({ paremias, titulo }: PropsType) => {
         window.addEventListener('resize', handler)
         return () => window.removeEventListener('resize', handler)
     }, [])
+
+    const [infoAbierta, setInfoAbierta] = useState(false)
     return (
         /* Container */
         <div className="w-full h-full flex flex-row justify-center items-center overflow-y-hidden">
@@ -44,7 +48,6 @@ const ParemiasComp = ({ paremias, titulo }: PropsType) => {
                 {paremias.map((paremia, i) => (
                     <div key={i}
                         className="w-[90vw] xl:w-[50vh] h-full bg-stone-200 absolute top-0 right-0 p-5 rounded-tr-2xl rounded-br-2xl border-l border-l-black/40"
-                        onClick={pasar}
                         style={{
                             backfaceVisibility: pantallaGrande ? "visible" : "hidden",
                             zIndex: paginaActual >= i + 2 ? 0 : (200 - i * 10),
@@ -54,16 +57,36 @@ const ParemiasComp = ({ paremias, titulo }: PropsType) => {
                             transformStyle: "preserve-3d"
                         }}>
                         {/* Info */}
-                        <div className="w-full h-full flex flex-col justify-start items-center gap-10"
+                        <div className="w-full h-full flex flex-col justify-start items-center gap-9 relative"
                             style={{
                                 backfaceVisibility: "hidden"
                             }}>
                             <div className="w-full h-[50%]">
                                 <img src={paremia.urlImagen} alt="imagen dicho" className="w-full h-full object-contain" />
                             </div>
-                            <p className="text-center text-black text-3xl md:text-4xl xl:text-5xl font-bold">{paremia.dicho}</p>
+                            <p className="text-center text-black text-3xl md:text-4xl font-bold">{paremia.dicho}</p>
+                            <button className="w-16 h-16 hover:scale-110 opacity-20" onClick={() => { setInfoAbierta(true) }}>
+                                <img src="information.svg" alt="informacion" />
+                            </button>
+                            {infoAbierta && (
+                                <div className="absolute top-0 left-0 w-full h-full bg-stone-200 p-5 flex flex-col justify-start items-center gap-5 text-black">
+                                    {/* Close */}
+                                    <div className="w-full flex flex-row justify-end items-center">
+                                        <button className="w-10 h-10 hover:scale-110" onClick={() => {setInfoAbierta(false)}}>
+                                            <img src="cross.svg" alt="cerrar" />
+                                        </button>
+                                    </div>
+                                    <p><span className="font-bold">Significado: </span>{paremia.significado}</p>
+                                    <p><span className="font-bold">Origen: </span>{paremia.origen}</p>
+                                </div>
+                            )}
+                            {/* Next arrow */}
+                            <div className="w-full flex flex-row justify-end items-center">
+                                <button onClick={pasar} className="w-16 h-16 bg-black/20 rounded-[50%]">
+                                    <img src="flechaSiguiente.svg" alt="siguiente" />
+                                </button>
+                            </div>
                         </div>
-
                     </div>
                 ))}
                 {/* Tapa inferior */}
