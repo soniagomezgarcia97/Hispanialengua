@@ -8,26 +8,26 @@ const Paremias = () => {
   const [dichos, setDichos] = useState(true)
   const [refranes, setRefranes] = useState(false)
   const paremiasDatos = [
-    {urlImagen: "Imagesdichos/cria_fama.webp", dicho: "«Cría fama y échate a dormir»"},
-    {urlImagen: "Imagesdichos/ojo_amo_caballo.webp", dicho: "«El ojo del amo engorda al caballo»"},
-    {urlImagen: "Imagesdichos/buen_entendedor.webp", dicho: "«A buen entendedor pocas palabras bastan»"},
-    {urlImagen: "Imagesdichos/perro_flaco.webp", dicho: "«A perro flaco todo son pulgas»"},
-    {urlImagen: "Imagesdichos/dicho_hecho.webp", dicho: "«Del dicho al hecho hay mucho trecho»"},
-    {urlImagen: "Imagesdichos/san_pedro.webp", dicho: "«A quien Dios se la dé, San pedro se la bendiga»"},
-    {urlImagen: "Imagesdichos/cesto_cientos.webp", dicho: "«Quien hace un cesto hace ciento»"},
-    {urlImagen: "Imagesdichos/col_lechuga.webp", dicho: "«Entre col y col, lechuga»"},
-    {urlImagen: "Imagesdichos/caer_burro.webp", dicho: "«Poner a alguien a bajar (caer) de un burro»"},
-    {urlImagen: "Imagesdichos/boca_cerrada.webp", dicho: "«En boca cerrada no entran moscas»"},
-    {urlImagen: "Imagesdichos/febrero_humero.webp", dicho: "«'En febrero un rato al sol y otro al humero' y 'En febrero saca la lengua el perro'.»"},
-    {urlImagen: "Imagesdichos/dios_rogando.webp", dicho: "«A Dios rogando y con el mazo dando»"},
-    {urlImagen: "Imagesdichos/digo_diego.webp", dicho: "«Donde dije digo, digo Diego»"},
-    {urlImagen: "Imagesdichos/tirar_la_toalla.webp", dicho: "«Tirar la toalla»"},
-    {urlImagen: "Imagesdichos/madrugar.webp", dicho: "«No por mucho madrugar amanece más temprano»"},
-    {urlImagen: "Imagesdichos/ciego.webp", dicho: "«No hay peor ciego que el que no quiere ver»"},
-    {urlImagen: "Imagesdichos/trapo.webp", dicho: "«Poner a alguien como un trapo»"},
-    {urlImagen: "Imagesdichos/pajaro_en_mano.webp", dicho: "«Más vale pájaro en mano que ciento volando»"},
-    {urlImagen: "Imagesdichos/mal_tiempo_buena_cara.webp", dicho: "«Al mal tiempo, buena cara»"},
-    {urlImagen: "Imagesdichos/perro_ladrador.webp", dicho: "«Perro ladrador, poco mordedor.»"}
+    { urlImagen: "Imagesdichos/cria_fama.webp", dicho: "«Cría fama y échate a dormir»" },
+    { urlImagen: "Imagesdichos/ojo_amo_caballo.webp", dicho: "«El ojo del amo engorda al caballo»" },
+    { urlImagen: "Imagesdichos/buen_entendedor.webp", dicho: "«A buen entendedor pocas palabras bastan»" },
+    { urlImagen: "Imagesdichos/perro_flaco.webp", dicho: "«A perro flaco todo son pulgas»" },
+    { urlImagen: "Imagesdichos/dicho_hecho.webp", dicho: "«Del dicho al hecho hay mucho trecho»" },
+    { urlImagen: "Imagesdichos/san_pedro.webp", dicho: "«A quien Dios se la dé, San pedro se la bendiga»" },
+    { urlImagen: "Imagesdichos/cesto_cientos.webp", dicho: "«Quien hace un cesto hace ciento»" },
+    { urlImagen: "Imagesdichos/col_lechuga.webp", dicho: "«Entre col y col, lechuga»" },
+    { urlImagen: "Imagesdichos/caer_burro.webp", dicho: "«Poner a alguien a bajar (caer) de un burro»" },
+    { urlImagen: "Imagesdichos/boca_cerrada.webp", dicho: "«En boca cerrada no entran moscas»" },
+    { urlImagen: "Imagesdichos/febrero_humero.webp", dicho: "«'En febrero un rato al sol y otro al humero' y 'En febrero saca la lengua el perro'.»" },
+    { urlImagen: "Imagesdichos/dios_rogando.webp", dicho: "«A Dios rogando y con el mazo dando»" },
+    { urlImagen: "Imagesdichos/digo_diego.webp", dicho: "«Donde dije digo, digo Diego»" },
+    { urlImagen: "Imagesdichos/tirar_la_toalla.webp", dicho: "«Tirar la toalla»" },
+    { urlImagen: "Imagesdichos/madrugar.webp", dicho: "«No por mucho madrugar amanece más temprano»" },
+    { urlImagen: "Imagesdichos/ciego.webp", dicho: "«No hay peor ciego que el que no quiere ver»" },
+    { urlImagen: "Imagesdichos/trapo.webp", dicho: "«Poner a alguien como un trapo»" },
+    { urlImagen: "Imagesdichos/pajaro_en_mano.webp", dicho: "«Más vale pájaro en mano que ciento volando»" },
+    { urlImagen: "Imagesdichos/mal_tiempo_buena_cara.webp", dicho: "«Al mal tiempo, buena cara»" },
+    { urlImagen: "Imagesdichos/perro_ladrador.webp", dicho: "«Perro ladrador, poco mordedor.»" }
   ]
   return (
     /* Container */
@@ -69,7 +69,7 @@ const Paremias = () => {
       </header>
       <main className="w-full flex-1 flex flex-col">
         {/* Botones */}
-        <div className="w-fit mx-auto bg-red-200 flex flex-row justify-center items-center text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] rounded-md backdrop-blur-sm font-bold mb-8">
+        <div className="w-fit mx-auto bg-white/80 flex flex-row justify-center items-center text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] rounded-md backdrop-blur-sm font-bold mb-8">
           <button className={`text-[#0f0e0b] px-3 py-1 rounded-tl-lg rounded-bl-lg ${dichos ? "bg-amber-500" : ""}`} onClick={() => {
             setDichos(true)
             setRefranes(false)
@@ -82,7 +82,7 @@ const Paremias = () => {
         {/* Container paremias */}
         <div className="flex flex-col flex-1">
           {/* Dichos */}
-          <article className={`w-full flex-1 flex flex-col text-2xl text-white ${dichos ? "block" : "hidden"}`}><ParemiasComp paremias={paremiasDatos}/></article>
+          <article className={`w-full flex-1 flex flex-col text-2xl text-white ${dichos ? "block" : "hidden"}`}><ParemiasComp paremias={paremiasDatos} titulo="Dichos" /></article>
           {/* Refranes */}
           <article className={`w-full flex-1 bg-blue-300 text-2xl text-white ${refranes ? "block" : "hidden"}`}>refranes</article>
         </div>

@@ -7,34 +7,39 @@ type ParemiasType = {
     dicho: string
 }
 type PropsType = {
-    paremias: ParemiasType[]
+    paremias: ParemiasType[],
+    titulo: string
 }
 
-const ParemiasComp = ({ paremias }: PropsType) => {
+const ParemiasComp = ({ paremias, titulo }: PropsType) => {
     const [paginaActual, setPaginaActual] = useState(0)
     const pasar = () => { setPaginaActual(pagina => pagina + 1) }
+
     const [pantallaGrande, setPantallaGrande] = useState(window.innerWidth >= 1280)
     useEffect(() => {
         const handler = () => setPantallaGrande(window.innerWidth >= 1280)
         window.addEventListener('resize', handler)
         return () => window.removeEventListener('resize', handler)
-    },[])
+    }, [])
     return (
         /* Container */
         <div className="w-full h-full flex flex-row justify-center items-center overflow-y-hidden">
             {/* Libro */}
-            <div className="w-[90vw] h-[55vh] xl:w-[100vh] xl:h-[70vh] relative drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] rounded-md backdrop-blur-sm" style={{ 
+            <div className="w-[90vw] h-[55vh] xl:w-[100vh] xl:h-[70vh] relative drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] rounded-md backdrop-blur-sm" style={{
                 perspective: "1000px",
-                transform: pantallaGrande && paginaActual === 0 ? "translateX(-25vh)": "translateX(0)" }}>
+                transform: pantallaGrande && paginaActual === 0 ? "translateX(-25vh)" : "translateX(0)"
+            }}>
                 {/* Tapa superior */}
-                <div className="w-[90vw] xl:w-[50vh] h-full bg-yellow-500 absolute top-0 right-0 z-210 rounded-tr-2xl rounded-br-2xl" onClick={pasar}
+                <div className="w-[90vw] xl:w-[50vh] h-full bg-yellow-500 absolute top-0 right-0 z-210 rounded-tr-2xl rounded-br-2xl flex flex-row justify-center items-center" onClick={pasar}
                     style={{
                         backfaceVisibility: pantallaGrande ? "visible" : "hidden",
                         zIndex: paginaActual >= 1 ? 0 : 210,
                         transformOrigin: "left center",
                         transform: paginaActual >= 1 ? "rotateY(-180deg)" : "rotateY(0deg)",
                         transition: "transform 0.7s ease, z-index 0s 0.35s",
-                    }}></div>
+                    }}>
+                    <h2 className="text-5xl font-bold text-black">{titulo}</h2>
+                </div>
                 {/* Paginas */}
                 {paremias.map((paremia, i) => (
                     <div key={i}
@@ -48,7 +53,7 @@ const ParemiasComp = ({ paremias }: PropsType) => {
                             transition: "transform 0.7s ease, z-index 0s 0.35s",
                             transformStyle: "preserve-3d"
                         }}>
-                            {/* Info */}
+                        {/* Info */}
                         <div className="w-full h-full flex flex-col justify-start items-center gap-10"
                             style={{
                                 backfaceVisibility: "hidden"
