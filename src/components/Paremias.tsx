@@ -24,6 +24,10 @@ const ParemiasComp = ({ paremias, titulo }: PropsType) => {
         return () => window.removeEventListener('resize', handler)
     }, [])
 
+    useEffect(() => {
+        const img = new Image()
+        img.src = "cross.png"
+    }, [])
     const [infoAbierta, setInfoAbierta] = useState(false)
     return (
         /* Container */
