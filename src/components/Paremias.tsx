@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 /* Type */
 type ParemiasType = {
     urlImagen: string,
-    dicho: string,
+    expresion: string,
     significado: string,
     origen: string
 }
@@ -41,8 +41,12 @@ const ParemiasComp = ({ paremias, titulo }: PropsType) => {
                         transformOrigin: "left center",
                         transform: paginaActual >= 1 ? "rotateY(-180deg)" : "rotateY(0deg)",
                         transition: "transform 0.7s ease, z-index 0s 0.35s",
+                        transformStyle: "preserve-3d"
                     }}>
-                    <h2 className="text-5xl font-bold text-black">{titulo}</h2>
+                    <h2 className="text-5xl font-bold text-black"
+                        style={{
+                            backfaceVisibility: "hidden"
+                        }}>{titulo}</h2>
                 </div>
                 {/* Paginas */}
                 {paremias.map((paremia, i) => (
@@ -57,22 +61,31 @@ const ParemiasComp = ({ paremias, titulo }: PropsType) => {
                             transformStyle: "preserve-3d"
                         }}>
                         {/* Info */}
-                        <div className="w-full h-full flex flex-col justify-start items-center gap-9 relative"
+                        <div className="w-full h-full flex flex-col justify-start items-center gap-2 md:gap-10 relative"
                             style={{
                                 backfaceVisibility: "hidden"
                             }}>
                             <div className="w-full h-[50%]">
                                 <img src={paremia.urlImagen} alt="imagen dicho" className="w-full h-full object-contain" />
                             </div>
-                            <p className="text-center text-black text-3xl md:text-4xl font-bold">{paremia.dicho}</p>
-                            <button className="w-16 h-16 hover:scale-110 opacity-20" onClick={() => { setInfoAbierta(true) }}>
-                                <img src="information.svg" alt="informacion" />
-                            </button>
+                            <p className="text-center text-black text-3xl md:text-4xl font-bold">{paremia.expresion}</p>
+                            {/* Botones */}
+                            <div className="w-full flex flex-row justify-center items-center">
+                                <button className="w-10 h-10 hover:scale-110 opacity-20" onClick={() => { setInfoAbierta(true) }}>
+                                    <img src="information.svg" alt="informacion" />
+                                </button>
+                                {/* Next arrow */}
+                                <div className="w-full flex flex-row justify-end items-center">
+                                    <button onClick={pasar} className="w-10 h-10 bg-black/20 rounded-[50%]">
+                                        <img src="flechaSiguiente.svg" alt="siguiente" />
+                                    </button>
+                                </div>
+                            </div>
                             {infoAbierta && (
-                                <div className="absolute top-0 left-0 w-full h-full bg-stone-200 p-5 flex flex-col justify-start items-center gap-5 text-black">
+                                <div className="absolute top-0 left-0 w-full h-full bg-stone-200 p-5 flex flex-col justify-start items-center gap-5 text-xs md:text-2xl text-black lg:text-xl">
                                     {/* Close */}
                                     <div className="w-full flex flex-row justify-end items-center">
-                                        <button className="w-10 h-10 hover:scale-110" onClick={() => {setInfoAbierta(false)}}>
+                                        <button className="w-10 h-10 hover:scale-110" onClick={() => { setInfoAbierta(false) }}>
                                             <img src="cross.svg" alt="cerrar" />
                                         </button>
                                     </div>
@@ -80,12 +93,6 @@ const ParemiasComp = ({ paremias, titulo }: PropsType) => {
                                     <p><span className="font-bold">Origen: </span>{paremia.origen}</p>
                                 </div>
                             )}
-                            {/* Next arrow */}
-                            <div className="w-full flex flex-row justify-end items-center">
-                                <button onClick={pasar} className="w-16 h-16 bg-black/20 rounded-[50%]">
-                                    <img src="flechaSiguiente.svg" alt="siguiente" />
-                                </button>
-                            </div>
                         </div>
                     </div>
                 ))}
