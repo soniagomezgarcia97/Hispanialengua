@@ -24,10 +24,6 @@ const ParemiasComp = ({ paremias, titulo }: PropsType) => {
         return () => window.removeEventListener('resize', handler)
     }, [])
 
-    useEffect(() => {
-        const img = new Image()
-        img.src = "cross.png"
-    }, [])
     const [infoAbierta, setInfoAbierta] = useState(false)
     return (
         /* Container */
@@ -103,6 +99,7 @@ const ParemiasComp = ({ paremias, titulo }: PropsType) => {
                 {/* Tapa inferior */}
                 <div className="w-[90vw] xl:w-[50vh] h-full bg-yellow-500 absolute top-0 right-0 z-0 rounded-tr-2xl rounded-br-2xl"></div>
             </div>
+            <img src="cross.svg" className="hidden" aria-hidden="true" />
         </div>
     )
 }
