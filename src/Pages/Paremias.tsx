@@ -91,7 +91,7 @@ const Paremias = () => {
       </header>
       <main className="w-full flex-1 flex flex-col">
         {/* Botones */}
-        <div className="w-fit mx-auto bg-white/80 flex flex-row justify-center items-center text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] rounded-md backdrop-blur-sm font-bold mb-8">
+        <div className="w-fit mx-auto bg-white/80 flex flex-row justify-center items-center text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] rounded-lg backdrop-blur-sm font-bold mb-8">
           <button className={`text-[#0f0e0b] px-3 py-1 rounded-tl-lg rounded-bl-lg ${dichos ? "bg-amber-500" : ""}`} onClick={() => {
             setDichos(true)
             setRefranes(false)
@@ -106,7 +106,7 @@ const Paremias = () => {
           {/* Dichos */}
           <article className={`w-full flex-1 flex flex-col text-2xl text-white ${dichos ? "block" : "hidden"}`}><ParemiasComp paremias={dichosDatos} titulo="Dichos" /></article>
           {/* Refranes */}
-          <article className={`w-full flex-1 bg-blue-300 text-2xl text-white ${refranes ? "block" : "hidden"}`}><ParemiasComp paremias={refranesDatos} titulo="Refranes" /></article>
+          <article className={`w-full flex-1 text-2xl text-white ${refranes ? "block" : "hidden"}`}><ParemiasComp paremias={refranesDatos} titulo="Refranes" /></article>
         </div>
       </main>
     </div>
