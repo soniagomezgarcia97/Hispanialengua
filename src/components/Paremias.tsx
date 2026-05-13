@@ -31,7 +31,8 @@ const ParemiasComp = ({ paremias, titulo }: PropsType) => {
             {/* Libro */}
             <div className="w-[90vw] h-[55vh] xl:w-[100vh] xl:h-[70vh] relative drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] rounded-md backdrop-blur-sm" style={{
                 perspective: "1000px",
-                transform: pantallaGrande && paginaActual === 0 ? "translateX(-25vh)" : "translateX(0)"
+                transform: pantallaGrande && paginaActual === 0 ? "translateX(-25vh)" : "translateX(0)",
+                transition: "transform 1.5s ease, z-index 0s 0.35s"
             }}>
                 {/* Tapa superior */}
                 <div className="w-[90vw] xl:w-[50vh] h-full bg-yellow-500 absolute top-0 right-0 z-210 rounded-tr-2xl rounded-br-2xl flex flex-row justify-center items-center" onClick={pasar}
@@ -40,7 +41,7 @@ const ParemiasComp = ({ paremias, titulo }: PropsType) => {
                         zIndex: paginaActual >= 1 ? 0 : 210,
                         transformOrigin: "left center",
                         transform: paginaActual >= 1 ? "rotateY(-180deg)" : "rotateY(0deg)",
-                        transition: "transform 0.7s ease, z-index 0s 0.35s",
+                        transition: "transform 1.5s ease, z-index 0s 0.35s",
                         transformStyle: "preserve-3d"
                     }}>
                     <h2 className="text-5xl font-bold text-black"
@@ -57,7 +58,7 @@ const ParemiasComp = ({ paremias, titulo }: PropsType) => {
                             zIndex: paginaActual >= i + 2 ? 0 : (200 - i * 10),
                             transformOrigin: "left center",
                             transform: paginaActual >= i + 2 ? "rotateY(-180deg)" : "rotateY(0deg)",
-                            transition: "transform 0.7s ease, z-index 0s 0.35s",
+                            transition: "transform 1.5s ease, z-index 0s 0.35s",
                             transformStyle: "preserve-3d"
                         }}>
                         {/* Info */}
