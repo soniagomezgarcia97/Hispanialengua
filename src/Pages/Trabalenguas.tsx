@@ -19,7 +19,7 @@ const Trabalenguas = () => {
               <h1 className="font-bold text-white text-2xl">Hispanialengua</h1>
             </div>
             {/* Boton menu */}
-            <button className="lg:hidden w-10 h-10" onClick={() => { setMenuDesplegable(!menuDesplegable) }}>
+            <button className="lg:hidden w-10 h-10" onClick={() => { setMenuDesplegable(!menuDesplegable) }} title="abrir menu">
               <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
 
                 <g id="SVGRepo_bgCarrier" stroke-width="0" />

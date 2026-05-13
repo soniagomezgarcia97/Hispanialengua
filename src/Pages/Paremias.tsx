@@ -62,7 +62,7 @@ const Paremias = () => {
             <h1 className="font-bold text-white text-2xl">Hispanialengua</h1>
           </div>
           {/* Boton menu */}
-          <button className="lg:hidden w-10 h-10" onClick={() => { setMenuDesplegable(!menuDesplegable) }}>
+          <button className="lg:hidden w-10 h-10" onClick={() => { setMenuDesplegable(!menuDesplegable) }} title="abrir menu">
             <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
 
               <g id="SVGRepo_bgCarrier" stroke-width="0" />
@@ -95,7 +95,7 @@ const Paremias = () => {
           <button className="text-white px-3 py-1 border-2 border-white relative" onClick={() => {
             setDichos(true)
             setRefranes(false)
-          }}>
+          }} title="dichos">
             <span className="relative z-10">Dichos</span>
             <div className={`w-[112%] h-2/3 bg-[#0f0e0b] absolute top-1.5 -left-1.5 ${dichos ? "scale-y-0 transition duration-700 ease" : "scale-y-100 transition duration-700 ease"}`}></div>
             <div className={`w-2/3 h-[200%] rotate-90 bg-[#0f0e0b] absolute -top-4 left-4 ${dichos ? "scale-y-0 transition duration-700 ease" : "scale-y-100 transition duration-700 ease"}`}></div>
@@ -103,7 +103,7 @@ const Paremias = () => {
           <button className="text-white px-3 py-1 border-2 border-white relative" onClick={() => {
             setRefranes(true)
             setDichos(false)
-          }}>
+          }} title="refranes">
             <span className="relative z-10">Refranes</span>
             <div className={`w-[112%] h-2/3 bg-[#0f0e0b] absolute top-1.5 -left-1.5 ${refranes ? "scale-y-0 transition duration-700 ease" : "scale-y-100 transition duration-700 ease"}`}></div>
             <div className={`w-2/3 h-[200%] rotate-90 bg-[#0f0e0b] absolute -top-4 left-4 ${refranes ? "scale-y-0 transition duration-700 ease" : "scale-y-100 transition duration-700 ease"}`}></div>

@@ -72,12 +72,12 @@ const ParemiasComp = ({ paremias, titulo }: PropsType) => {
                             <p className="text-center text-black text-3xl md:text-4xl font-bold">{paremia.expresion}</p>
                             {/* Botones */}
                             <div className="w-full flex flex-row justify-center items-center">
-                                <button className="w-10 h-10 hover:scale-110 opacity-20" onClick={() => { setInfoAbierta(true) }}>
+                                <button className="w-10 h-10 hover:scale-110 opacity-20" onClick={() => { setInfoAbierta(true) }} title="información">
                                     <img src="information.svg" alt="informacion" />
                                 </button>
                                 {/* Next arrow */}
                                 <div className="w-full flex flex-row justify-end items-center">
-                                    <button onClick={pasar} className="w-10 h-10 bg-black/20 rounded-[50%]">
+                                    <button onClick={pasar} className="w-10 h-10 bg-black/20 rounded-[50%]" title="siguiente">
                                         <img src="flechaSiguiente.svg" alt="siguiente" />
                                     </button>
                                 </div>
@@ -86,7 +86,7 @@ const ParemiasComp = ({ paremias, titulo }: PropsType) => {
                                 <div className="absolute top-0 left-0 w-full h-full bg-stone-200 p-5 flex flex-col justify-start items-center gap-5 text-xs md:text-2xl text-black lg:text-xl">
                                     {/* Close */}
                                     <div className="w-full flex flex-row justify-end items-center">
-                                        <button className="w-10 h-10 hover:scale-110" onClick={() => { setInfoAbierta(false) }}>
+                                        <button className="w-10 h-10 hover:scale-110" onClick={() => { setInfoAbierta(false) }} title="cerrar">
                                             <img src="cross.svg" alt="cerrar" />
                                         </button>
                                     </div>
