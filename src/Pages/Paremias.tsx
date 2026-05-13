@@ -110,11 +110,11 @@ const Paremias = () => {
           </button>
         </div>
         {/* Container paremias */}
-        <div className="flex flex-col flex-1">
+        <div className="flex flex-col flex-1 relative">
           {/* Dichos */}
-          <article className={`w-full flex-1 flex flex-col text-2xl text-white ${dichos ? "block" : "hidden"}`}><ParemiasComp paremias={dichosDatos} titulo="Dichos" /></article>
+          <article className={`w-full flex-1 flex flex-col text-2xl text-white ${dichos ? "absolute inset-0 opacity-100 transition duration-700 ease" : "opacity-0 pointer-events-none transition duration-700 ease"}`}><ParemiasComp paremias={dichosDatos} titulo="Dichos" /></article>
           {/* Refranes */}
-          <article className={`w-full flex-1 text-2xl text-white ${refranes ? "block" : "hidden"}`}><ParemiasComp paremias={refranesDatos} titulo="Refranes" /></article>
+          <article className={`w-full flex-1 text-2xl text-white ${refranes ? "absolute inset-0 opacity-100 transition duration-700 ease" : "opacity-0 pointer-events-none transition duration-700 ease"}`}><ParemiasComp paremias={refranesDatos} titulo="Refranes" /></article>
         </div>
       </main>
     </div>
