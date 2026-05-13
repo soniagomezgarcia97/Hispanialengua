@@ -8,7 +8,8 @@ const Capsulas = () => {
   return (
     <>
       {/* Container */}
-      <div>
+      <div className="w-full h-screen flex flex-col bg-[#0f0e0b]">
+        {/* Header */}
         <header className="w-full col-span-1 p-10 flex flex-col gap-6 self-start xl:col-span-1 xl:flex-row xl:justify-between xl:items-center">
           <div className="flex flex-row justify-between items-center">
             {/* Logo */}
@@ -44,6 +45,8 @@ const Capsulas = () => {
             <li><Link to={"/"}>Home</Link></li>
           </ul>
         </header>
+        {/* Main */}
+        <main></main>
       </div>
     </>
   )

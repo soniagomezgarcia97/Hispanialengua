@@ -91,15 +91,23 @@ const Paremias = () => {
       </header>
       <main className="w-full flex-1 flex flex-col">
         {/* Botones */}
-        <div className="w-fit mx-auto bg-white/80 flex flex-row justify-center items-center text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] rounded-lg backdrop-blur-sm font-bold mb-8">
-          <button className={`text-[#0f0e0b] px-3 py-1 rounded-tl-lg rounded-bl-lg ${dichos ? "bg-amber-500" : ""}`} onClick={() => {
+        <div className="w-fit mx-auto flex flex-row justify-center items-center gap-2.5 text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] rounded-lg backdrop-blur-sm font-bold mb-8">
+          <button className="text-white px-3 py-1 border-2 border-white relative" onClick={() => {
             setDichos(true)
             setRefranes(false)
-          }}>Dichos</button>
-          <button className={`text-[#0f0e0b] px-3 py-1 rounded-tr-lg rounded-br-lg ${refranes ? "bg-yellow-500" : ""}`} onClick={() => {
+          }}>
+            <span className="relative z-10">Dichos</span>
+            <div className={`w-[112%] h-2/3 bg-[#0f0e0b] absolute top-1.5 -left-1.5 ${dichos ? "scale-y-0 transition duration-700 ease" : "scale-y-100 transition duration-700 ease"}`}></div>
+            <div className={`w-2/3 h-[200%] rotate-90 bg-[#0f0e0b] absolute -top-4 left-4 ${dichos ? "scale-y-0 transition duration-700 ease" : "scale-y-100 transition duration-700 ease"}`}></div>
+          </button>
+          <button className="text-white px-3 py-1 border-2 border-white relative" onClick={() => {
             setRefranes(true)
             setDichos(false)
-          }}>Refranes</button>
+          }}>
+            <span className="relative z-10">Refranes</span>
+            <div className={`w-[112%] h-2/3 bg-[#0f0e0b] absolute top-1.5 -left-1.5 ${refranes ? "scale-y-0 transition duration-700 ease" : "scale-y-100 transition duration-700 ease"}`}></div>
+            <div className={`w-2/3 h-[200%] rotate-90 bg-[#0f0e0b] absolute -top-4 left-4 ${refranes ? "scale-y-0 transition duration-700 ease" : "scale-y-100 transition duration-700 ease"}`}></div>
+          </button>
         </div>
         {/* Container paremias */}
         <div className="flex flex-col flex-1">
