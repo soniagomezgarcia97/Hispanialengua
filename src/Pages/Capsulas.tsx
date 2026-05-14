@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import CapsulasComp from "../components/Capsulas"
 
 const Capsulas = () => {
   const [menuDesplegable, setMenuDesplegable] = useState(false)
@@ -46,7 +47,10 @@ const Capsulas = () => {
           </ul>
         </header>
         {/* Main */}
-        <main></main>
+        <main className="flex-1 w-full flex flex-col gap-1">
+          <CapsulasComp />
+          <CapsulasComp />
+        </main>
       </div>
     </>
   )
