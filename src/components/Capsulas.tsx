@@ -6,19 +6,14 @@ const CapsulasComp = () => {
     const [etimilogiaAbierta, setEtimilogiaAbierta] = useState(false)
     return (
         /* Container */
-        <div className="w-1/2 h-1/2 bg-blue-400 relative"
+        <div className="w-1/2 h-1/2 bg-orange-200 relative">
+            <button className="w-full h-1/2 bg-blue-300 z-20 absolute top-0 left-0" 
+            onClick={() => {setEtimilogiaAbierta(!etimilogiaAbierta)}}>Primavera</button>
+            <p className="w-full h-1/2 bg-red-300 z-10 absolute top-0 left-0 p-5" 
             style={{
-                zIndex: etimilogiaAbierta ? 10 : 0,
-                transition: etimilogiaAbierta ? "z-index 0s 0s" : "z-index 0s 1s"
-            }}>
-            <button className="w-full h-full bg-red-400 overflow-hidden z-20" onClick={() => setEtimilogiaAbierta(!etimilogiaAbierta)}>Primavera</button>
-            {/* Etimologia */}
-            <div className="z-10" style={{
                 transform: etimilogiaAbierta ? "translateY(100%)" : "translateY(0%)",
-                transition: "transform 0.7s ease"
-            }}>
-                <p className="bg-white text-black z-20">Proviene del latín PRIMA VERA, que significa “primer verano, “primer verdor”. Esta expresión latina se refería a la primera estación del año, que se consideraba una especie de preludio del verano, una temporada cálida, que en la antigua Roma comenzaba a finales de marzo y principios de abril.</p>
-            </div>
+                transition: "transform 1s ease"
+            }}>Proviene del latín PRIMA VERA, que significa “primer verano...”. Esta expresión latina se refería a la primera estación del año, que se consideraba una especie de preludio del verano, una temporada cálida, que en la antigua Roma comenzaba a finales de marzo y principios de abril</p>
         </div>
     )
 }
