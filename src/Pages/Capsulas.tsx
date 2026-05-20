@@ -89,7 +89,7 @@ const Capsulas = () => {
           </ul>
         </header>
         {/* Main */}
-        <main className="w-full h-full grid grid-cols-2 gap-5 auto-rows-[350px] pb-5">
+        <main className="w-full h-full grid grid-cols-1 xl:grid-cols-2 gap-5 auto-rows-[350px] pb-32 lg:pb-5">
           <article className="w-full h-auto"><CapsulasComp etimologias={capsulasDatos[0]} /></article>
           <article className="w-full h-full"><CapsulasComp etimologias={capsulasDatos[1]} /></article>
           <article className="w-full h-full"><CapsulasComp etimologias={capsulasDatos[2]} /></article>
