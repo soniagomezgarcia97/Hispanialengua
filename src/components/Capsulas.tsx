@@ -15,7 +15,7 @@ const CapsulasComp = ({ etimologias }: PropsType) => {
     const [etimilogiaAbierta, setEtimilogiaAbierta] = useState(false)
     const [esTablet, setEsTablet] = useState(window.innerWidth >= 768)
     useEffect(() => {
-        const handler = () => {setEsTablet(window.innerWidth >= 768)}
+        const handler = () => { setEsTablet(window.innerWidth >= 768) }
         window.addEventListener('resize', handler)
         return () => {
             window.removeEventListener('resize', handler)
@@ -23,7 +23,7 @@ const CapsulasComp = ({ etimologias }: PropsType) => {
     })
     const [esOrdenador, setEsOrdenador] = useState(window.innerWidth >= 900)
     useEffect(() => {
-        const handler = () => {setEsOrdenador(window.innerWidth >= 900)}
+        const handler = () => { setEsOrdenador(window.innerWidth >= 900) }
         window.addEventListener('resize', handler)
         return () => {
             window.removeEventListener('resize', handler)
@@ -32,7 +32,10 @@ const CapsulasComp = ({ etimologias }: PropsType) => {
     return (
         /* Container */
         <div className="w-full h-full relative">
-            <button className="w-full h-1/2 z-20 absolute top-0 left-0 bg-[url('ImagesCapsulas/capsula.png')] bg-no-repeat bg-contain lg:bg-cover bg-center text-2xl font-bold uppercase"
+            <button className={`w-full h-1/2 z-20 absolute top-0 left-0 bg-no-repeat bg-contain lg:bg-cover bg-center text-2xl font-bold uppercase`}
+                style={{
+                    backgroundImage: `url(${'ImagesCapsulas/capsula.png'})`
+                }}
                 onClick={() => { setEtimilogiaAbierta(!etimilogiaAbierta) }}>{etimologias.palabra}</button>
             <div className="w-full h-1/2 z-10 absolute top-0 left-0"
                 style={{
