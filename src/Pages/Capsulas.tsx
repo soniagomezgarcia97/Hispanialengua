@@ -75,11 +75,11 @@ const Capsulas = () => {
           </div>
           {/* Menu */}
           <ul className={`text-white ml-[20%] lg:flex lg:flex-row lg:ml-0 justify-center items-start gap-8 ${menuDesplegable ? "flex flex-col justify-center items-start gap-8" : "hidden"}`}>
-            <li><Link to={"/capsulas"}>Cápsulas</Link></li>
+            <li className="text-yellow-500"><Link to={"/capsulas"}>Cápsulas</Link></li>
             <li><Link to={"/paremias"}>Paremias</Link></li>
             <li><Link to={"/espanol-vivo"}>Español vivo</Link></li>
             <li><Link to={"/juegos"}>Juegos</Link></li>
-            <li className="text-yellow-500"><Link to={"/trabalenguas"}>Trabalenguas</Link></li>
+            <li><Link to={"/trabalenguas"}>Trabalenguas</Link></li>
             <li><Link to={"/cortos"}>Cortos</Link></li>
             <li><Link to={"/cultura"}>Cultura</Link></li>
             <li><Link to={"/musica"}>Música</Link></li>
